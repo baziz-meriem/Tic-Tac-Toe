@@ -6,11 +6,14 @@
 :root {
   --color-bg-dark:#192a33;
   --color-bg-light:#1f3640;
+  --color-gray-light:#bec4c7;
   --color-gray:#7a8991;
   --color-yellow:#f2b238;
   --color-yellow-dark:#cd8d16;
   --color-blue:#30c4be;
   --color-blue-dark:#128c89;
+
+  --shadow-y: 6px;
 }
 
 html {
@@ -100,7 +103,7 @@ font-size: 1.725rem;
   gap:12px;
 }
 .btn {
-  background: var(--color-gray);
+  background: var(--color-gray-light);
   border: none;
   font-size:1.125rem;
   font-weight: bold;
@@ -110,6 +113,62 @@ font-size: 1.725rem;
   border-radius:10px ;
   color:var(--color-bg-light);
   display: inline-block;
-  box-shadow: 0 6px 0 var(--color-gray-dark);
-  margin-bottom:6px
+  box-shadow: 0 var(--shadow-y) 0 var(--color-gray);
+  margin-bottom: 6px;
+ 
 }
+.btn:hover {
+  transform:translateY(-2px);
+  --shadow-y:8px;
+}
+.btn:active {
+  transform:translateY(2px);
+  --shadow-y:4px;
+}
+.btn-yellow {
+  background-color: var(--color-yellow);
+  box-shadow:0 var(--shadow-y) 0 var(--color-yellow-dark)
+}
+.btn-blue {
+  background-color: var(--color-blue);
+  box-shadow:0 var(--shadow-y) 0 var(--color-blue-dark)
+}
+.btn-sm {
+  --shadow-y:4px;
+}
+.btn-sm :hover {
+  --shadow-y:6px;
+}
+.btn-sm :active{
+  --shadow-y:3px;
+}
+/*Icons*/
+.icon {
+  display:inline-block;
+}
+.icon svg {
+  fill :var(--color-gray);
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+}
+.icon-sm svg {
+  height:30px;
+  width: 50px;
+
+}
+.icon-lg svg {
+  height:65px;
+  width: 65px;
+
+}
+.icon-yellow svg {
+  fill:var(--color-yellow);
+}
+.icon-blue svg {
+  fill:var(--color-blue);
+}
+.icon-dark svg {
+  fill:var(--color-bg-dark);
+}
+
