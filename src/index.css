@@ -48,6 +48,18 @@ body {
   text-align : center;
 
 }
+.bg-light {
+  background-color: var(--color-gray);
+  color:var(--color-bg-dark);
+}
+.bg-yellow {
+  background-color: var(--color-yellow);
+  color:var(--color-bg-dark);
+}
+.bg-blue {
+  background-color: var(--color-blue);
+  color:var(--color-bg-dark);
+}
 .text-lg {
 font-size: 1rem;
 }
@@ -171,4 +183,66 @@ font-size: 1.725rem;
 .icon-dark svg {
   fill:var(--color-bg-dark);
 }
+.board__header {
+display:flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom:50px;
+}
+.board__turn {
+  border-radius:5px;
+  background-color: var(--color-bg-light);
+  padding:8px 12px;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.board__restart svg {
+  height:20px;
+  display:flex;
+  align-items:center;
+  transform-origin:center;
+  transition: all 0.3s;
+}
+.board__restart:active svg {
+  transform:rotate(180deg);
+}
+.board__body {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px 20px;
+}
+.board__body .card {
+  height:120px;
+  cursor:pointer;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-inline:10px;
 
+}
+.board__body .active.shadow-blue {
+  background-color: var(--color-blue);
+}
+.board__body .active.shadow-yellow{
+  background-color: var(--color-yellow);
+}
+.shadow-gray {
+  box-shadow:0 8px 0 rgba(0,0,0,0.2);
+}
+.shadow-blue {
+  box-shadow:0 8px 0 var(--color-blue-dark);
+}
+.shadow-yellow {
+  box-shadow:0 8px 0 var(--color-yellow-dark);
+}
+.board__footer {
+  margin-top:30px;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:20px;
+}
+.board__footer .card {
+
+}
