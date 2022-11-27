@@ -1,9 +1,11 @@
 import React from 'react'
 import Xicon from '../icons/Xicon'
 import Oicon from '../icons/Oicon'
-
+import { GameContext } from '../context/GameContext'
+import { useContext } from 'react'
 
 const Start = () => {
+    const { activeUser, PlayMode,setActiveUser,setPlayMode } = useContext(GameContext);
   return (
     <div className="start">
         <div className="start__header">

@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { ModalState } from './components/context/ModalContext';
+import { GameState } from './components/context/GameContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ModalState>
+      <GameState>
+        <App />
+      </GameState>
+    </ModalState>
   </React.StrictMode>
 );
 
